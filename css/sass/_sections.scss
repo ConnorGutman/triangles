@@ -1,0 +1,87 @@
+.signup-container {
+  height: 100vh;
+}
+.sidebar {
+  background-color: #ffffff;
+  a {
+    text-decoration: none;
+    color: #292b2c;
+    &:focus {
+      color: #292b2c;
+    }
+    &:visited {
+      color: #292b2c;
+    }
+  }
+  h1 {
+    margin: 2vh 5%;
+    font-family: 'Pacifico', cursive;
+    span {
+      color: #F03AA0;
+    }
+  }
+  h2 {
+    color: #F03AA0;
+    font-size: 2.25em;
+    font-weight: 600;
+    padding: 5% 5% 0;
+  }
+  #logo {
+    width: auto;
+    margin-top: -2vh;
+    height: 7vh;
+  }
+  #sidebar-graphic {
+    width: 60%;
+    margin-left: 15%;
+    margin-bottom: 5vh;
+  }
+  .danger-icon {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10vh;
+  }
+  p {
+    font-size: 1em;
+    padding: 0 10% 0 5%;
+    margin-bottom: 5vh;
+  }
+  .corner-message {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+  }
+  @media(max-width: 544px) {
+    position: fixed;
+    bottom: 0;
+    padding: 2vh 0;
+  }
+}
+.content {
+  padding: 5vh 5%;
+  background-color: #353342;
+  background-image: url('../img/trianglesBG.svg');
+  background-repeat: repeat;
+  background-size: 200%;
+  background-position: center center;
+  transition: background-position 1s ease;
+  &:hover {
+    background-position: 50px 50px;
+  }
+  .form-wrapper {
+    position: relative;
+    transform: translateY(-50%);
+  }
+  .step-3 {
+    #fireworks {
+      width: 20%;
+      margin-left: 40%;
+    }
+  }
+  @media(min-width: 544px) {
+    background-repeat: no-repeat;
+  }
+}
+.hovered {
+  background-position: 50px 50px;
+}

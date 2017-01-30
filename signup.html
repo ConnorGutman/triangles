@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Roboto|Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row signup-container">
+      <div class="col-sm-8 push-sm-4 content">
+        <p class="text-right step-indicator">Step <span id="step">1</span>/3</p>
+        <div class="form-wrapper step-1">
+          <div class="input-group">
+            <span class="input-group-addon" id="username-addon"><i class="material-icons">account_circle</i></span>
+            <input type="text" class="form-control" placeholder="Username" aria-describedby="username-addon">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="password-addon"><i class="material-icons">vpn_key</i></span>
+            <input type="password" class="form-control" placeholder="Password" aria-describedby="password-addon">
+          </div>
+          <button type="button" class="btn btn-secondary btn-lg toStep" id="toStep2">Next<i class="material-icons">play_circle_filled</i></button>
+        </div>
+        <div class="form-wrapper step-2">
+          <div class="input-group">
+            <span class="input-group-addon" id="a1-addon"><i class="material-icons">lock</i></span>
+            <input type="text" class="form-control" placeholder="Security Answer 1" aria-describedby="a1-addon">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="a2-addon"><i class="material-icons">lock</i></span>
+            <input type="text" class="form-control" placeholder="Security Answer 2" aria-describedby="a2-addon">
+          </div>
+          <button type="button" class="btn btn-secondary btn-lg" id="toStep3">Next<i class="material-icons">play_circle_filled</i></button>
+        </div>
+        <div class="form-wrapper step-3">
+          <div class="card">
+            <div class="card-block">
+              <img id="fireworks" src="img/fireworks2.svg">
+              <h1 class="card-title text-center">Welcome!</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 pull-sm-8 sidebar">
+        <a href=""><h1 class="text-center text-sm-left"><img id="logo" src="img/logo.svg">triangles<span>.io</span></h1></a>
+        <div class="corner-message hidden-xs-down">
+          <h2>Relax a little.</h2>
+          <p>Your server deserves a break! Triangles.io combines the latest decentralized technologies to create a friendly and secure user management solution for any situation. Give our demo form a spin and see how you can get up and running in minutes.</p>
+          <img id="sidebar-graphic" src="img/sun-bath.svg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script>
+    $("input").focus(function() {
+      $(".content").addClass('hovered');
+    });
+    $("input").focusout(function() {
+      $(".content").removeClass('hovered');
+      $(".danger-icon").removeClass('rotate-90');
+    });
+    $("#toStep2").click(function() {
+      $(".step-1").addClass("nextSlide");
+      $(".step-2").css('display', 'block');
+      setTimeout(function() {
+        $(".step-1").css('display', 'none');
+        $(".step-2").addClass("currentSlide");
+        $("#step").html("2");
+      }, 500);
+    });
+    $("#toStep3").click(function() {
+      $(".step-2").addClass("nextSlide");
+      $(".step-3").css('display', 'block');
+      setTimeout(function() {
+        $(".step-2").css('display', 'none');
+        $(".step-3").addClass("currentSlide");
+        $("#step").html("3");
+      }, 500);
+    });
+  </script>
+</body>
+
+</html>

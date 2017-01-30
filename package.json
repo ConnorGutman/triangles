@@ -1,0 +1,24 @@
+{
+  "name": "triangles",
+  "version": "1.0.0",
+  "description": "Bitcoin based account management",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify js/app.js -o js/bundle.js",
+    "watch": "watchify js/app.js -o js/bundle.js"
+  },
+  "author": "Connor Gutman",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.3.0",
+    "uglify-js": "^2.7.5",
+    "watchify": "^3.8.0"
+  },
+  "dependencies": {
+    "aes": "^0.1.0",
+    "bitcoinjs-lib": "^2.3.0",
+    "bitcoinjs-message": "^1.0.1",
+    "qrcode": "^0.5.0",
+    "sjcl": "^1.0.6"
+  }
+}

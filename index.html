@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 15px;
+    }
+
+    label {
+      display: block;
+      width: 50%;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    textarea {
+      width: 100%;
+    }
+
+    .section {
+      float: left;
+      width: 33.33%;
+      padding: 2%;
+    }
+
+    .section h1 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    #signUp p {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="section" id="signUp">
+    <h1>Sign Up</h1>
+    <label>Username:</label>
+    <input type="text" id="username" placeholder="username"></input>
+    <label>Password:</label>
+    <input type="password" id="password" placeholder="password"></input>
+    <label>Security Q1 Answer:</label>
+    <input type="text" id="q1" placeholder="answer"></input>
+    <label>Security Q2 Answer:</label>
+    <input type="text" id="q2" placeholder="answer"></input>
+    <br><br>
+    <button id="submitSignUp">Sign Up</button>
+  </div>
+  <div class="section" id="signIn">
+    <h1>Sign In</h1>
+    <label>Account:</label>
+    <textarea id="account"></textarea>
+    <label>Password:</label>
+    <input type="password" id="SignInPassword"></input>
+    <br><br>
+    <button id="submitSignIn">Sign In</button>
+  </div>
+  <div class="section" id="recover">
+    <h1>Recover</h1>
+  </div>
+  <script src="js/bundle.js" charset="utf-8"></script>
+</body>
+
+</html>

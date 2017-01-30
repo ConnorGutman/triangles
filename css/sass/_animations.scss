@@ -1,0 +1,11 @@
+.nextSlide {
+  transform: translateX(-200%) translateY(-50%) !important;
+  opacity: 0;
+}
+.currentSlide {
+  top: 50% !important;
+  opacity: 1 !important;
+}
+.rotate-90 {
+  transform: rotate(-90deg);
+}
